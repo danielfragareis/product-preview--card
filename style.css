@@ -9,8 +9,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    /* font-family: 'Montserrat', sans-serif; */
-    /* font-family: 'Fraunces', serif; */
 }
 
 body {
@@ -19,6 +17,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--cream);
+    height: 550px;
 }
 
 header {
@@ -27,24 +26,27 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    min-width: 344px;
     width: 91vw;
-    height: 88vh;
+    height: 100%;
     margin-top: 20px;
-    padding: 0 0 5vh 0;
+    padding: 0 0 8vh 0;
     background-color: var(--white);
     border-radius: 10px;
 }
 
-h1, h2, section {
+h1, h2, section.description, .price {
     padding: 0px 20px;
 }
 
-figure {
+picture {
     width: 100%;
     height: 35vh;
 }
 
-figure img {
+picture img {
     width: 100%;
     height: 100%;
     border-top-right-radius: 10px;
@@ -69,6 +71,10 @@ header h2 {
     text-transform: uppercase;
     color: var(--darkGrayishBlue);
     margin: 1em 1em 0em 0.5em;
+}
+
+.content {
+    height: 50vh;
 }
 
 .description p {
@@ -103,7 +109,7 @@ header h2 {
     text-decoration-color:hsla(212, 21%, 14%, 0.5);
 }
 
-button {
+.content button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: var(--white);
@@ -113,16 +119,54 @@ button {
     align-items: center;
     justify-content: center;
     width: 85%;
-    height: 10%;
+    height: 8vh;
+    min-height: 45px;
     border-radius: 10px;
     margin: 1.5em auto auto auto;
+    cursor: pointer;
 }
 
-
-
+.content button:hover {
+    background-color: hsl(158, 33%, 22%);
+}
 
 footer {
     position: absolute;
     /* position: fixed; */
-    margin-top: 100vh;
+    margin-top: 175%;
+}
+
+@media (min-width: 400px) {    
+    main {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        min-height: 300px;
+        max-height: 380px;
+        width: 50%;
+        min-width: 550px;
+    }
+
+    .image {
+        flex: 50%;
+    }
+
+    picture {
+        height: 100%;
+    }
+
+    picture img {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .content {
+        background-color: var(--white);
+        flex: 50%;
+        border-top-right-radius: 10px;
+    }
+
+    footer {
+        margin-top: 500px;
+    }
 }
