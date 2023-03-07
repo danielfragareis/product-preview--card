@@ -26,13 +26,14 @@ header {
 }
 
 main {
+    position: absolute;
     min-width: 344px;
     width: 91vw;
     min-height: 300px;
-    max-height: 500px;
-    height: 95%;
+    max-height: 550px;
+    height: 100%;
     padding: 0 0 8vh 0;
-    margin: auto 0;
+    margin: 0;
     background-color: var(--white);
     border-radius: 10px;
 }
@@ -56,7 +57,7 @@ picture img {
 header h1 {
     font-family: 'Fraunces', sans-serif;
     font-weight: 700;
-    margin: 0.3em 0em 0em 0.2em;
+    margin: 5% 0em 0em 0.2em;
     padding-right: 0.8em;
     width: 80%;
     font-size: 2.2em;
@@ -70,25 +71,26 @@ header h2 {
     letter-spacing: .4em;
     text-transform: uppercase;
     color: var(--darkGrayishBlue);
-    margin: 1em 1em 0em 0.5em;
+    margin: 5% 1em 0em 0.5em;
 }
 
 .content {
-    height: 50vh;
-    max-height: 380px;
+    height: 100%;
+    max-height: 550px;
 }
 
 .description p {
     font-family: 'Montserrat', sans-serif;
     color: var(--darkGrayishBlue);
     font-weight: 500;
-    margin: 1em 0.2em 0em 0.5em;
+    margin: 5% 0.2em 0em 0.5em;
     line-height: 1.6em;
 }
 
 .price {
     display: flex;
     align-items: center;
+    margin-top: 5%;
 }
 
 .price p {
@@ -111,6 +113,7 @@ header h2 {
 }
 
 .content button {
+    position: relative;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: var(--white);
@@ -123,7 +126,7 @@ header h2 {
     height: 8vh;
     height: 45px;
     border-radius: 10px;
-    margin: auto auto auto auto;
+    margin: 5% auto;
     cursor: pointer;
 }
 
@@ -131,17 +134,13 @@ header h2 {
     background-color: hsl(158, 33%, 22%);
 }
 
-footer {
-    display: none;
-}
 
 @media (min-width: 400px) {    
     main {
         display: flex;
         flex-direction: row;
         padding: 0;
-        min-height: 300px;
-        max-height: 380px;
+        height: 450px;
         width: 40%;
         min-width: 550px;
         max-width: 700px;
@@ -149,10 +148,11 @@ footer {
 
     .image {
         flex: 50%;
+        height: 450px;
     }
 
     picture {
-        height: 100%;
+        height: fit-content;
     }
 
     picture img {
@@ -161,9 +161,17 @@ footer {
     }
 
     .content {
+        display: grid;
+        gap: 3% 0;
+        height: 450px;
+        padding: 10% auto;
         background-color: var(--white);
         flex: 50%;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+    }
+
+    .description p {
+        line-height: 2em;
     }
 }
