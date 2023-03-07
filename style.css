@@ -17,8 +17,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--cream);
-    height: 600px;
-    align-content: center;
+    height: 100vh;
 }
 
 header {
@@ -27,14 +26,13 @@ header {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
     min-width: 344px;
     width: 91vw;
     min-height: 300px;
+    max-height: 500px;
     height: 95%;
-    margin-top: 20px;
     padding: 0 0 8vh 0;
+    margin: auto 0;
     background-color: var(--white);
     border-radius: 10px;
 }
@@ -77,6 +75,7 @@ header h2 {
 
 .content {
     height: 50vh;
+    max-height: 380px;
 }
 
 .description p {
@@ -122,9 +121,9 @@ header h2 {
     justify-content: center;
     width: 85%;
     height: 8vh;
-    min-height: 45px;
+    height: 45px;
     border-radius: 10px;
-    margin: 1.5em auto auto auto;
+    margin: auto auto auto auto;
     cursor: pointer;
 }
 
@@ -133,9 +132,7 @@ header h2 {
 }
 
 footer {
-    position: absolute;
-    /* position: fixed; */
-    margin-top: 175%;
+    display: none;
 }
 
 @media (min-width: 400px) {    
@@ -167,9 +164,6 @@ footer {
         background-color: var(--white);
         flex: 50%;
         border-top-right-radius: 10px;
-    }
-
-    footer {
-        margin-top: 500px;
+        border-bottom-right-radius: 10px;
     }
 }
